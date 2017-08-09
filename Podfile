@@ -16,6 +16,8 @@ target 'Ori_DevelopingNow' do
 pod 'FacebookCore'
 pod 'FacebookLogin'
 pod 'FacebookShare'
+pod 'SDWebImage'
+pod 'MBProgressHUD'
 
 
 end

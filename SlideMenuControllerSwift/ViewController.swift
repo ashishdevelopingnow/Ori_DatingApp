@@ -12,7 +12,7 @@ import FBSDKShareKit
 import FBSDKLoginKit
 import FacebookLogin
 import FacebookCore
-
+import MBProgressHUD
 
 class ViewController: UIViewController {
 
@@ -32,9 +32,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func loginWithFBClicked(_ sender: Any) {
-    
+        MBProgressHUD.showAdded(to: self.view, animated: true)
         let loginManager = LoginManager()
-        loginManager.logIn([ .publicProfile ], viewController: self) { loginResult in
+        loginManager.logIn([ .publicProfile, .userFriends, .email], viewController: self) { loginResult in
             switch loginResult {
             case .failed(let error):
                 print(error)
@@ -53,7 +53,9 @@ class ViewController: UIViewController {
         FBSDKGraphRequest.init(graphPath: "me", parameters: parameters).start { (connection, object, error) in
             if let obj = object as? NSDictionary {
                 UserDefaults.standard.setValue(obj, forKey: "user_fb_data")
+                print(UserDefaults.standard.value(forKey: "user_fb_data")!)
                 let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                MBProgressHUD.hide(for: self.view, animated: true)
                 appDelegate.createMenuView()
             }
         }

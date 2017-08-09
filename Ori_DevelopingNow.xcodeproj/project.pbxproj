@@ -12,6 +12,9 @@
 		0EB8EBFF1BE3CF3C00BC2A99 /* SlideMenuControllerSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E75C5A51BE3CAFE00844634 /* SlideMenuControllerSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		15652A97BD922A9A3695ADB5 /* Pods_Ori_DevelopingNowTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F668123A1150E01E9A12B5D /* Pods_Ori_DevelopingNowTests.framework */; };
 		1C5D09EEEF0A9B0179B56D40 /* Pods_Ori_DevelopingNow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BA7FA95F087095224D1723F /* Pods_Ori_DevelopingNow.framework */; };
+		752A2FCE1F3B0B3F000E34E2 /* MatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752A2FCD1F3B0B3F000E34E2 /* MatchViewController.swift */; };
+		752A2FD11F3B1321000E34E2 /* MTPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752A2FD01F3B1321000E34E2 /* MTPopUp.swift */; };
+		B5D89BB11F3A1A6400E3AD89 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D89BB01F3A1A6400E3AD89 /* MainTableViewCell.swift */; };
 		B5E913C11F35F1C5009FAC0A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E913C01F35F1C5009FAC0A /* ViewController.swift */; };
 		B5E913C51F362286009FAC0A /* FemaleFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E913C41F362286009FAC0A /* FemaleFriendViewController.swift */; };
 		B5E913C71F3623E9009FAC0A /* MaleFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E913C61F3623E9009FAC0A /* MaleFriendViewController.swift */; };
@@ -62,7 +65,10 @@
 		4C72D82F13FD16E2D7A4E1DC /* Pods-Ori_DevelopingNow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ori_DevelopingNow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ori_DevelopingNow/Pods-Ori_DevelopingNow.debug.xcconfig"; sourceTree = "<group>"; };
 		53AD5F9A2965C4159CBC0135 /* Pods-Ori_DevelopingNowTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ori_DevelopingNowTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ori_DevelopingNowTests/Pods-Ori_DevelopingNowTests.release.xcconfig"; sourceTree = "<group>"; };
 		5BA7FA95F087095224D1723F /* Pods_Ori_DevelopingNow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ori_DevelopingNow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		752A2FCD1F3B0B3F000E34E2 /* MatchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchViewController.swift; sourceTree = "<group>"; };
+		752A2FD01F3B1321000E34E2 /* MTPopUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTPopUp.swift; sourceTree = "<group>"; };
 		8A6576D92CDACEACD8441946 /* Pods-Ori_DevelopingNow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ori_DevelopingNow.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ori_DevelopingNow/Pods-Ori_DevelopingNow.release.xcconfig"; sourceTree = "<group>"; };
+		B5D89BB01F3A1A6400E3AD89 /* MainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		B5E913C01F35F1C5009FAC0A /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B5E913C41F362286009FAC0A /* FemaleFriendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FemaleFriendViewController.swift; sourceTree = "<group>"; };
 		B5E913C61F3623E9009FAC0A /* MaleFriendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaleFriendViewController.swift; sourceTree = "<group>"; };
@@ -142,10 +148,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		752A2FCF1F3B1321000E34E2 /* MTPopupClass */ = {
+			isa = PBXGroup;
+			children = (
+				752A2FD01F3B1321000E34E2 /* MTPopUp.swift */,
+			);
+			path = MTPopupClass;
+			sourceTree = "<group>";
+		};
 		C539E6381A315E87003B7CC7 = {
 			isa = PBXGroup;
 			children = (
 				C539E64D1A315E87003B7CC7 /* Main.storyboard */,
+				752A2FCF1F3B1321000E34E2 /* MTPopupClass */,
 				C5BA8AA41A43E24C00863FB9 /* Source */,
 				C539E6431A315E87003B7CC7 /* OriControllerSwift */,
 				C539E65C1A315E87003B7CC7 /* OriControllerSwiftTests */,
@@ -247,6 +262,8 @@
 			isa = PBXGroup;
 			children = (
 				C539E64B1A315E87003B7CC7 /* MainViewController.swift */,
+				B5D89BB01F3A1A6400E3AD89 /* MainTableViewCell.swift */,
+				752A2FCD1F3B0B3F000E34E2 /* MatchViewController.swift */,
 				C539E66B1A316C78003B7CC7 /* LeftViewController.swift */,
 				C539E66D1A316F5F003B7CC7 /* RightViewController.swift */,
 				C5BF6A851BEF4C080064C18E /* SubContentsViewController.swift */,
@@ -535,6 +552,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				752A2FCE1F3B0B3F000E34E2 /* MatchViewController.swift in Sources */,
 				C5BF6A8E1BF34A8B0064C18E /* UIApplication.swift in Sources */,
 				C539E64C1A315E87003B7CC7 /* MainViewController.swift in Sources */,
 				B5E913C51F362286009FAC0A /* FemaleFriendViewController.swift in Sources */,
@@ -542,10 +560,12 @@
 				C5C1CE611A70F3B600B6E411 /* UITableViewExtension.swift in Sources */,
 				C539E64A1A315E87003B7CC7 /* SlideMenuControllerSwift.xcdatamodeld in Sources */,
 				B5E913C11F35F1C5009FAC0A /* ViewController.swift in Sources */,
+				B5D89BB11F3A1A6400E3AD89 /* MainTableViewCell.swift in Sources */,
 				C5BF6A8C1BF340020064C18E /* ExSlideMenuController.swift in Sources */,
 				C5C1CE5D1A70F27500B6E411 /* BaseTableViewCell.swift in Sources */,
 				C539E66C1A316C78003B7CC7 /* LeftViewController.swift in Sources */,
 				C5BF6A821BEEF1A70064C18E /* DataTableViewCell.swift in Sources */,
+				752A2FD11F3B1321000E34E2 /* MTPopUp.swift in Sources */,
 				C539E6471A315E87003B7CC7 /* AppDelegate.swift in Sources */,
 				C5F179D21BEB2FAF00EEDD9A /* UIColor.swift in Sources */,
 				B5E913C71F3623E9009FAC0A /* MaleFriendViewController.swift in Sources */,
